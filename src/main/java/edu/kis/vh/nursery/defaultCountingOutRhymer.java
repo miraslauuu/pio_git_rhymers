@@ -36,4 +36,8 @@ private static final int EMPTY = -1;
                         return NUMBERS[total--];
                     }
 
+                    public int getTotal() {
+                        return total;
+                    }
+
 }
