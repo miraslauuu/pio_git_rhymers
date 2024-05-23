@@ -1,15 +1,15 @@
 package edu.kis.vh.nursery;
 
-public class defaultCountingOutRhymer {
+private class defaultCountingOutRhymer {
 
-public static  int TOTAL_NUMBERS = 12;
-public static int MAX_CAPACITY = TOTAL_NUMBERS - 1;
-public static final int EMPTY = -1;
+private static  int TOTAL_NUMBERS = 12;
+private static int MAX_CAPACITY = TOTAL_NUMBERS - 1;
+private static final int EMPTY = -1;
 
 
-    private int[] NUMBERS = new int[TOTAL_NUMBERS];
+    private final int[] NUMBERS = new int[TOTAL_NUMBERS];
 
-    public int total = -1;
+    private int total = -1;
 
     public void countIn(int in) {
         if (!isFull())
@@ -34,6 +34,10 @@ public static final int EMPTY = -1;
                         if (callCheck())
                             return EMPTY;
                         return NUMBERS[total--];
+                    }
+
+                    public int getTotal() {
+                        return total;
                     }
 
 }
